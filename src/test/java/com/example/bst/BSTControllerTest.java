@@ -1,11 +1,10 @@
 package com.example.bst;
 
-import com.example.bst.model.TreeNodeDTO;
-import com.example.bst.model.TreeRecord;
-import com.example.bst.repo.TreeRecordRepository;
-import com.example.bst.service.BSTService;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.time.Instant;
+import java.util.Map;
+
 import org.junit.jupiter.api.Test;
+import static org.mockito.ArgumentMatchers.any;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -13,14 +12,14 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import java.time.Instant;
-import java.util.List;
-import java.util.Map;
-
-import static org.mockito.ArgumentMatchers.any;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import com.example.bst.model.TreeRecord;
+import com.example.bst.repo.TreeRecordRepository;
+import com.example.bst.service.BSTService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @WebMvcTest
 @Import(BSTService.class)

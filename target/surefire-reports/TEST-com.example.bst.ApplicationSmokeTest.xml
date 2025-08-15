@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.bst.BSTControllerTest" time="0.384" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.bst.ApplicationSmokeTest" time="1.942" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -63,9 +63,9 @@
     <property name="java.class.version" value="67.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[bst-app] "/>
   </properties>
-  <testcase name="processNumbersStoresAndReturnsTrees" classname="com.example.bst.BSTControllerTest" time="0.129">
-    <system-out><![CDATA[2025-08-15T12:20:02.570-02:30  INFO 20752 --- [bst-app] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.bst.BSTControllerTest]: BSTControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-08-15T12:20:02.583-02:30  INFO 20752 --- [bst-app] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.bst.BstAppApplication for test class com.example.bst.BSTControllerTest
+  <testcase name="contextLoads" classname="com.example.bst.ApplicationSmokeTest" time="0.47">
+    <system-out><![CDATA[12:20:00.720 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.bst.ApplicationSmokeTest]: ApplicationSmokeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:20:00.780 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.bst.BstAppApplication for test class com.example.bst.ApplicationSmokeTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -76,12 +76,18 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2025-08-15T12:20:02.605-02:30  INFO 20752 --- [bst-app] [           main] com.example.bst.BSTControllerTest        : Starting BSTControllerTest using Java 23.0.2 with PID 20752 (started by Scar in C:\Users\Scar\Pictures\FINAL DSA SPRINT BACKEND)
-2025-08-15T12:20:02.605-02:30  INFO 20752 --- [bst-app] [           main] com.example.bst.BSTControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2025-08-15T12:20:02.814-02:30  INFO 20752 --- [bst-app] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-08-15T12:20:02.814-02:30  INFO 20752 --- [bst-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-08-15T12:20:02.815-02:30  INFO 20752 --- [bst-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-08-15T12:20:02.819-02:30  INFO 20752 --- [bst-app] [           main] com.example.bst.BSTControllerTest        : Started BSTControllerTest in 0.233 seconds (process running for 2.535)
+2025-08-15T12:20:01.038-02:30  INFO 20752 --- [bst-app] [           main] com.example.bst.ApplicationSmokeTest     : Starting ApplicationSmokeTest using Java 23.0.2 with PID 20752 (started by Scar in C:\Users\Scar\Pictures\FINAL DSA SPRINT BACKEND)
+2025-08-15T12:20:01.039-02:30  INFO 20752 --- [bst-app] [           main] com.example.bst.ApplicationSmokeTest     : No active profile set, falling back to 1 default profile: "default"
+2025-08-15T12:20:01.368-02:30  INFO 20752 --- [bst-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-08-15T12:20:01.396-02:30  INFO 20752 --- [bst-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 MongoDB repository interface.
+2025-08-15T12:20:01.653-02:30  INFO 20752 --- [bst-app] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/23.0.2+7-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7235f92b, com.mongodb.Jep395RecordCodecProvider@7885776b, com.mongodb.KotlinCodecProvider@497d4c96]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2025-08-15T12:20:01.669-02:30  INFO 20752 --- [bst-app] [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=11643900}
+2025-08-15T12:20:02.084-02:30  INFO 20752 --- [bst-app] [           main] com.example.bst.ApplicationSmokeTest     : Started ApplicationSmokeTest in 1.212 seconds (process running for 1.801)
 ]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\Scar\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.17\byte-buddy-agent-1.14.17.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
   </testcase>
 </testsuite>
